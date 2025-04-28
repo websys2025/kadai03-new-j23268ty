@@ -38,6 +38,12 @@
                 else{
                 no-=1;
                 console.log("商品番号: "+items[no].id+", 商品名: "+items[no].name+"を購入します。");
+                if(items[no].stock<=0){
+                    console.log("在庫がありません。");
+                }
+                else{
+                    items[no].stock-=1;
+                }
                     }
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
